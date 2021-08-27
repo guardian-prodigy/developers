@@ -7,7 +7,7 @@
   }
   @font-face {
     font-family: "BioRyhme";
-    src: url('..fonts/BioRhyme-Light.ttf');
+    src: url('../fonts/BioRhyme-Light.ttf');
     font-style: normal;
     font-weight: 900;
   }
@@ -20,8 +20,8 @@
   $primary-blue-4: #00abff;
   $primary-blue-5: #0098e2;
   $header-for-article: rgb(137, 224, 24);
-  $font-monospace: SpaceMonoItalic;
-  $font-bioRhyme: BioRyhme;
+  $font-monospace: 'SpaceMonoItalic';
+  $font-bioRhyme: 'BioRyhme';
   $border-radius: 0.5rem;
   $box-shadow-1: 0px 0px 0.5rem rgb(77, 70, 70);
   $box-shadow-2: 0px 0px 0.5rem rgb(51, 46, 46);

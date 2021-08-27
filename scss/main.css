@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "BioRyhme";
-  src: url("..fonts/BioRhyme-Light.ttf");
+  src: url("../fonts/BioRhyme-Light.ttf");
   font-style: normal;
   font-weight: 900;
 }
@@ -70,7 +70,7 @@ html {
 * .main nav .nav-container .header .nav-logo {
   color: white;
   font-size: 2rem;
-  font-family: BioRyhme;
+  font-family: "BioRyhme";
   text-transform: capitalize;
   letter-spacing: 0.1rem;
 }
@@ -112,7 +112,7 @@ html {
 }
 
 * .main nav .nav-intro div div .nav-intro-paragraph {
-  font-family: SpaceMonoItalic;
+  font-family: "SpaceMonoItalic";
   letter-spacing: 0.1rem;
   text-transform: capitalize;
   color: #00abff;
@@ -196,7 +196,7 @@ html {
   margin: 0 auto;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  font-family: SpaceMonoItalic;
+  font-family: "SpaceMonoItalic";
   background: #0098e2;
   border: transparent;
   height: -webkit-fit-content;
@@ -268,7 +268,7 @@ html {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: SpaceMonoItalic;
+  font-family: "SpaceMonoItalic";
   border-bottom: #89e018 0.2rem dotted;
   letter-spacing: 0.1rem;
 }
@@ -311,7 +311,7 @@ html {
 
 * .main .section-center article .name-container .name-info p {
   font-size: 1.2rem;
-  font-family: BioRyhme;
+  font-family: "BioRyhme";
   color: #555551;
   text-transform: capitalize;
 }
@@ -325,7 +325,7 @@ html {
 * .main .section-center article .text {
   color: #838375;
   padding: 1rem;
-  font-family: BioRyhme;
+  font-family: "BioRyhme";
   text-transform: capitalize;
 }
 
