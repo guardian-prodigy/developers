@@ -1,0 +1,405 @@
+@font-face {
+  font-family: "SpaceMonoItalic";
+  src: url("../fonts/BioRhyme-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BioRyhme";
+  src: url("..fonts/BioRhyme-Light.ttf");
+  font-style: normal;
+  font-weight: 900;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* li {
+  list-style: none;
+}
+
+* img {
+  height: 13rem;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+
+* button {
+  border: none;
+  background: transparent;
+}
+
+* .main nav {
+  -webkit-box-shadow: 0px 0px 0.5rem #332e2e;
+          box-shadow: 0px 0px 0.5rem #332e2e;
+  height: 100vh;
+  position: relative;
+}
+
+* .main nav .nav-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  background: url("../images/wave-haikei(3).svg") center/cover no-repeat;
+  height: 60vh;
+}
+
+* .main nav .nav-container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .main nav .nav-container .header .nav-logo {
+  color: white;
+  font-size: 2rem;
+  font-family: BioRyhme;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+
+* .main nav .nav-container .header .nav-logo span {
+  color: #89e018;
+}
+
+* .main nav .nav-container .header a {
+  color: white;
+}
+
+* .main nav .nav-container .header a .fa-bars {
+  font-size: 1.5rem;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+* .main nav .nav-container .header a .fa-bars:hover {
+  -webkit-transform: scale(1.2) rotate(90deg);
+          transform: scale(1.2) rotate(90deg);
+}
+
+* .main nav .nav-intro {
+  margin: 0 auto;
+  width: 95%;
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+  max-width: 500px;
+}
+
+* .main nav .nav-intro div {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background: whitesmoke;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+}
+
+* .main nav .nav-intro div div .nav-intro-paragraph {
+  font-family: SpaceMonoItalic;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  color: #00abff;
+}
+
+* .main nav .nav-intro div div {
+  display: -ms-grid;
+  display: grid;
+}
+
+* .main nav .nav-intro div div .visit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 0.75rem;
+  background: #0098e2;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+* .main nav .nav-intro div div .visit a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.1rem;
+}
+
+* .main .after-nav-svg {
+  background: url("../images/layered-waves-haikei(2).svg") center/cover;
+  height: 50vh;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+}
+
+* .main .btns-section {
+  min-height: 100vh;
+  width: 50vw;
+  z-index: 999;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  position: fixed;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  top: 0;
+  opacity: 95%;
+  background: linear-gradient(45deg, #0098e2, #57c8ff);
+}
+
+* .main .btns-section .fa-times {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #972020;
+  font-size: 1.7rem;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+* .main .btns-section .fa-times:hover {
+  color: red;
+  -webkit-transform: scale(1.5) rotate(360deg);
+          transform: scale(1.5) rotate(360deg);
+}
+
+* .main .btns-section .btn-container {
+  margin-top: 2.5rem;
+  display: -ms-grid;
+  display: grid;
+}
+
+* .main .btns-section .btn-container .filter-btn {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-family: SpaceMonoItalic;
+  background: #0098e2;
+  border: transparent;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: turquoise;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 100%;
+  padding: 0.4rem;
+  margin-top: 2rem;
+  color: black;
+  -webkit-filter: saturate(150%);
+  filter: saturate(150%);
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+* .main .btns-section .btn-container .filter-btn:hover {
+  background: white;
+  color: #0098e2;
+}
+
+* .main .btns-show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  max-width: 400px;
+}
+
+* .main .section-center {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: (minmax(350px, auto))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  margin: 3rem auto 0 auto;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  max-width: 1200px;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+
+* .main .section-center article {
+  -webkit-box-shadow: 0px 0px 0.5rem #4d4646;
+          box-shadow: 0px 0px 0.5rem #4d4646;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  width: 90%;
+  background-color: rgba(128, 128, 128, 0.116);
+  max-width: 450px;
+  margin: 1em auto;
+  border-radius: 0.5rem;
+}
+
+* .main .section-center article .header h3 {
+  font-size: 2.5rem;
+  margin: 1rem auto;
+  padding: 0.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: SpaceMonoItalic;
+  border-bottom: #89e018 0.2rem dotted;
+  letter-spacing: 0.1rem;
+}
+
+* .main .section-center article .img-container {
+  border-radius: 0.5rem;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+}
+
+* .main .section-center article .img-container img {
+  border-radius: 0.5rem;
+}
+
+* .main .section-center article .img-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0.2rem #1db5ff solid;
+  top: -1rem;
+  right: -1rem;
+  z-index: -1;
+  border-radius: 0.5rem;
+}
+
+* .main .section-center article .name-container .name-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+* .main .section-center article .name-container .name-info p {
+  font-size: 1.2rem;
+  font-family: BioRyhme;
+  color: #555551;
+  text-transform: capitalize;
+}
+
+* .main .section-center article .name-container .underline {
+  width: 95%;
+  border-bottom: 0.2rem dotted #1db5ff;
+  margin: 0 auto;
+}
+
+* .main .section-center article .text {
+  color: #838375;
+  padding: 1rem;
+  font-family: BioRyhme;
+  text-transform: capitalize;
+}
+
+* .main .section-center article .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  background: #ddd8d8;
+}
+
+* .main .section-center article .social-icons li {
+  font-size: 1.3rem;
+  color: #0098e2;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+* .main .section-center article .social-icons li:hover {
+  color: #57c8ff;
+}
+
+* .main .section-center article:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: 0px 0px 0.5rem #332e2e;
+          box-shadow: 0px 0px 0.5rem #332e2e;
+}
+
+* .footer {
+  width: 100%;
+  background: #0e0e55;
+  padding: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: url("../images/stacked-waves-haikei(2).svg") center/cover no-repeat;
+}
+
+* .footer .footer-section {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+* .footer .footer-section .icons {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+  justify-items: center;
+}
+
+* .footer .footer-section .icons .icon {
+  color: white;
+}
+
+* .footer .footer-section .copyright {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.15rem;
+}
+
+@media screen and (min-width: 500px) {
+  .main nav {
+    background: url("../images/wave-haikei(7).svg") center/cover no-repeat;
+  }
+}
+/*# sourceMappingURL=main.css.map */
