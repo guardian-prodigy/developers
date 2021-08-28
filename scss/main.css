@@ -27,34 +27,37 @@ html {
   list-style: none;
 }
 
-* img {
-  height: 13rem;
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  display: block;
-}
-
 * button {
   border: none;
   background: transparent;
 }
 
-* .main nav {
+* .main .svg-background {
+  background: url("../images/wave-haikei(13).svg") center/cover no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  aspect-ratio: 960/300;
+}
+
+* .main .nav-center {
   -webkit-box-shadow: 0px 0px 0.5rem #332e2e;
           box-shadow: 0px 0px 0.5rem #332e2e;
   height: 100vh;
   position: relative;
 }
 
-* .main nav .nav-container {
+* .main .nav-center .nav-container {
   max-width: 1160px;
+  position: relative;
+  background: red;
   margin: 0 auto;
-  background: url("../images/wave-haikei(3).svg") center/cover no-repeat;
-  height: 60vh;
+  background: url("../images/wave-haikei(3).svg");
 }
 
-* .main nav .nav-container .header {
+* .main .nav-center .nav-container .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,7 +70,7 @@ html {
           align-items: center;
 }
 
-* .main nav .nav-container .header .nav-logo {
+* .main .nav-center .nav-container .header .nav-logo {
   color: white;
   font-size: 2rem;
   font-family: "BioRyhme";
@@ -75,55 +78,73 @@ html {
   letter-spacing: 0.1rem;
 }
 
-* .main nav .nav-container .header .nav-logo span {
+* .main .nav-center .nav-container .header .nav-logo span {
   color: #89e018;
 }
 
-* .main nav .nav-container .header a {
+* .main .nav-center .nav-container .header a {
   color: white;
 }
 
-* .main nav .nav-container .header a .fa-bars {
+* .main .nav-center .nav-container .header a .fa-bars {
   font-size: 1.5rem;
   -webkit-transition: 0.2s all linear;
   transition: 0.2s all linear;
 }
 
-* .main nav .nav-container .header a .fa-bars:hover {
+* .main .nav-center .nav-container .header a .fa-bars:hover {
   -webkit-transform: scale(1.2) rotate(90deg);
           transform: scale(1.2) rotate(90deg);
 }
 
-* .main nav .nav-intro {
+* .main .nav-center .fixed-nav {
+  position: fixed;
+  top: 0;
+  z-index: 998;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
   margin: 0 auto;
-  width: 95%;
-  -webkit-transform: translateY(-70%);
-          transform: translateY(-70%);
-  max-width: 500px;
+  background-color: #0066FF;
 }
 
-* .main nav .nav-intro div {
+* .main .nav-intro {
+  margin: 0 auto;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+* .main .nav-intro div {
   -ms-grid-column-align: center;
       justify-self: center;
   background: whitesmoke;
   padding: 0.5rem;
+  width: 95%;
+  max-width: 500px;
   border-radius: 0.5rem;
   margin: 0 auto;
 }
 
-* .main nav .nav-intro div div .nav-intro-paragraph {
+* .main .nav-intro div div .nav-intro-paragraph {
   font-family: "SpaceMonoItalic";
   letter-spacing: 0.1rem;
   text-transform: capitalize;
   color: #00abff;
 }
 
-* .main nav .nav-intro div div {
+* .main .nav-intro div div {
   display: -ms-grid;
   display: grid;
 }
 
-* .main nav .nav-intro div div .visit {
+* .main .nav-intro div div .visit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -135,22 +156,12 @@ html {
   cursor: pointer;
 }
 
-* .main nav .nav-intro div div .visit a {
+* .main .nav-intro div div .visit a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 1.1rem;
-}
-
-* .main .after-nav-svg {
-  background: url("../images/layered-waves-haikei(2).svg") center/cover;
-  height: 50vh;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  z-index: 2;
-  overflow: hidden;
-  position: relative;
 }
 
 * .main .btns-section {
@@ -237,12 +248,10 @@ html {
   place-items: center;
   -ms-grid-columns: (minmax(350px, auto))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-  margin: 3rem auto 0 auto;
+  margin: 3rem auto;
   -webkit-transition: 0.2s all linear;
   transition: 0.2s all linear;
   max-width: 1200px;
-  -webkit-transform: translateY(-10%);
-          transform: translateY(-10%);
 }
 
 * .main .section-center article {
@@ -276,6 +285,7 @@ html {
 * .main .section-center article .img-container {
   border-radius: 0.5rem;
   width: 70%;
+  height: 13rem;
   margin: 0 auto;
   position: relative;
   margin-top: 2rem;
@@ -285,6 +295,11 @@ html {
 
 * .main .section-center article .img-container img {
   border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 
 * .main .section-center article .img-container::after {
@@ -333,22 +348,26 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 1rem;
   background: #ddd8d8;
 }
 
 * .main .section-center article .social-icons li {
   font-size: 1.3rem;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+* .main .section-center article .social-icons li a i {
   color: #0098e2;
   -webkit-transition: 0.2s all linear;
   transition: 0.2s all linear;
 }
 
-* .main .section-center article .social-icons li:hover {
-  color: #57c8ff;
+* .main .section-center article .social-icons li a i:hover {
+  color: white;
 }
 
 * .main .section-center article:hover {
@@ -383,23 +402,35 @@ html {
       grid-template-columns: repeat(5, 1fr);
   list-style: none;
   justify-items: center;
+  max-width: 1120px;
 }
 
 * .footer .footer-section .icons .icon {
   color: white;
+  font-size: 1.2rem;
+}
+
+* .footer .footer-section .icons .icon a {
+  color: white;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+* .footer .footer-section .icons .icon a:hover {
+  color: #3abeff;
 }
 
 * .footer .footer-section .copyright {
   color: white;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 1.3rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.15rem;
 }
 
 @media screen and (min-width: 500px) {
-  .main nav {
-    background: url("../images/wave-haikei(7).svg") center/cover no-repeat;
+  .main .svg-background {
+    background: url("../images/wave-haikei(15).svg") center/cover no-repeat;
   }
 }
 /*# sourceMappingURL=main.css.map */
