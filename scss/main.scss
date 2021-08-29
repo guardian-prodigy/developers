@@ -33,13 +33,11 @@ $transition: 0.2s all linear;
   border-bottom: 0.2rem dotted $primary-blue-3;
   margin: 0 auto;
 }
-html {
-  scroll-behavior: smooth;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
   li {
     list-style: none;
   }
@@ -49,7 +47,7 @@ html {
   }
   .main {
     .svg-background {
-      background: url("../images/wave-haikei(13).svg") center/cover no-repeat;
+      background: url("../images/wave-haikei(15).svg") center/cover no-repeat;
       width: 100%;
       min-height: 100vh;
       position: absolute;
@@ -61,34 +59,37 @@ html {
       box-shadow: $box-shadow-2;
       height: 100vh;
       position: relative;
-      .nav-container {
-        max-width: 1160px;
-        position: relative;
-        background: red;
-        margin: 0 auto;
-        background: url("../images/wave-haikei(3).svg");
-        .header {
-          display: flex;
-          justify-content: space-between;
-          padding: 1rem;
-          align-items: center;
-          .nav-logo {
-            color: white;
-            font-size: 2rem;
-            font-family: $font-bioRhyme;
-            text-transform: capitalize;
-            letter-spacing: 0.1rem;
-            span {
-              color: $header-for-article;
+      .nav-full {
+        width: 100%;
+        .nav-container {
+          max-width: 1160px;
+
+          position: relative;
+          margin: 0 auto;
+          background: url("../images/wave-haikei(3).svg");
+          .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            align-items: center;
+            .nav-logo {
+              color: white;
+              font-size: 2rem;
+              font-family: $font-bioRhyme;
+              text-transform: capitalize;
+              letter-spacing: 0.1rem;
+              span {
+                color: $header-for-article;
+              }
             }
-          }
-          a {
-            color: white;
-            .fa-bars {
-              font-size: 1.5rem;
-              transition: $transition;
-              &:hover {
-                transform: scale(1.2) rotate(90deg);
+            a {
+              color: white;
+              .fa-bars {
+                font-size: 1.5rem;
+                transition: $transition;
+                &:hover {
+                  transform: scale(1.2) rotate(90deg);
+                }
               }
             }
           }
@@ -97,14 +98,13 @@ html {
       .fixed-nav {
         position: fixed;
         top: 0;
-        z-index: 998;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
+        z-index: 2;
+        
         margin: 0 auto;
-        background-color: #0066FF;
+        background-color: $primary-blue-1;
       }
     }
+
     .nav-intro {
       margin: 0 auto;
       width: 100%;
@@ -117,7 +117,8 @@ html {
         justify-self: center;
         background: rgb(245, 245, 245);
         padding: 0.5rem;
-        width: 95%;max-width: 500px;
+        width: 95%;
+        max-width: 500px;
         border-radius: $border-radius;
         margin: 0 auto;
         div {
@@ -257,6 +258,7 @@ html {
           display: grid;
           img {
             border-radius: $border-radius;
+            -o-object-fit: cover;
             object-fit: cover;
             height: 100%;
             width: 100%;

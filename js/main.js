@@ -69,8 +69,15 @@ const sectionBtn = document.querySelector(".btn-container");
 const btnsidebar = document.querySelectorAll(".btn-js");
 const sidebar = document.querySelector(".btns-section");
 const shown = document.querySelector(".btns-show");
-const navbar = document.querySelector(".nav-container");
-
+const navbar = document.querySelector(".nav-full");
+window.addEventListener("scroll", () => {
+  let navbarHeight = navbar.getBoundingClientRect().height;
+  if (window.pageYOffset > navbarHeight) {
+    navbar.classList.add("fixed-nav");
+  } else {
+    navbar.classList.remove("fixed-nav");
+  }
+});
 window.addEventListener(
   "DOMContentLoaded",
   () => displayInfo(information),
@@ -163,10 +170,4 @@ function Sidebar() {
     });
   });
 }
-// function navBar() {
-//   let navbarHeight = navbar.getBoundingClientRect().height;
-//   if (window.offsetTop >= navbarHeight) {
-//     navbar.classList.toggle('fixed-nav');
-//   }
-// }
-// navBar()
+

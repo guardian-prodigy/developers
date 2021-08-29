@@ -12,15 +12,12 @@
   font-weight: 900;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
 }
 
 * li {
@@ -33,7 +30,7 @@ html {
 }
 
 * .main .svg-background {
-  background: url("../images/wave-haikei(13).svg") center/cover no-repeat;
+  background: url("../images/wave-haikei(15).svg") center/cover no-repeat;
   width: 100%;
   min-height: 100vh;
   position: absolute;
@@ -49,15 +46,18 @@ html {
   position: relative;
 }
 
-* .main .nav-center .nav-container {
+* .main .nav-center .nav-full {
+  width: 100%;
+}
+
+* .main .nav-center .nav-full .nav-container {
   max-width: 1160px;
   position: relative;
-  background: red;
   margin: 0 auto;
   background: url("../images/wave-haikei(3).svg");
 }
 
-* .main .nav-center .nav-container .header {
+* .main .nav-center .nav-full .nav-container .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,7 +70,7 @@ html {
           align-items: center;
 }
 
-* .main .nav-center .nav-container .header .nav-logo {
+* .main .nav-center .nav-full .nav-container .header .nav-logo {
   color: white;
   font-size: 2rem;
   font-family: "BioRyhme";
@@ -78,21 +78,21 @@ html {
   letter-spacing: 0.1rem;
 }
 
-* .main .nav-center .nav-container .header .nav-logo span {
+* .main .nav-center .nav-full .nav-container .header .nav-logo span {
   color: #89e018;
 }
 
-* .main .nav-center .nav-container .header a {
+* .main .nav-center .nav-full .nav-container .header a {
   color: white;
 }
 
-* .main .nav-center .nav-container .header a .fa-bars {
+* .main .nav-center .nav-full .nav-container .header a .fa-bars {
   font-size: 1.5rem;
   -webkit-transition: 0.2s all linear;
   transition: 0.2s all linear;
 }
 
-* .main .nav-center .nav-container .header a .fa-bars:hover {
+* .main .nav-center .nav-full .nav-container .header a .fa-bars:hover {
   -webkit-transform: scale(1.2) rotate(90deg);
           transform: scale(1.2) rotate(90deg);
 }
@@ -100,13 +100,9 @@ html {
 * .main .nav-center .fixed-nav {
   position: fixed;
   top: 0;
-  z-index: 998;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 100%;
+  z-index: 2;
   margin: 0 auto;
-  background-color: #0066FF;
+  background-color: #57c8ff;
 }
 
 * .main .nav-intro {
@@ -296,7 +292,7 @@ html {
 * .main .section-center article .img-container img {
   border-radius: 0.5rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
   display: block;
