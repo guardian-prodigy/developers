@@ -4,9 +4,16 @@ const information = [
     name: "wiraysha",
     img: "./images/person-1.jpeg",
     job: "Letter-designer",
-    age: 17,
-    text: `tenetur deserunt expedita sit debitis, sapiente quos unde omnis culpa,
-          iste modi! Doloribus velit accusantium quod porro illum eos voluptas?`,
+    age: 16,
+    text: `Hello everyone I am Wiraysha. I make beautiful leters, pompoms, and much more! Please visit my social media listed down below to see some examples of my work.`,
+    socialMedia: `<li class="icon">
+    <a href="https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f"
+      ><i class="fab fa-instagram"></i
+    ></a>
+  </li>
+  <li class="icon">
+    <a href="https://www.facebook.com/profile.php?id=100070475412876"><i class="fab fa-facebook"></i></a>
+  </li><li class="icon"><a href=""><i class="fas fa-compass"></i></a></li>`,
   },
   {
     id: 2,
@@ -16,6 +23,19 @@ const information = [
     age: 17,
     text: `tenetur deserunt expedita sit debitis, sapiente quos unde omnis culpa,
           iste modi! Doloribus velit accusantium quod porro illum eos voluptas?`,
+    socialMedia: `<li class="icon">
+    <a href="https://wa.me/+5977624268"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+  </li>
+  <li class="icon">
+    <a href="https://instagram.com/thunderous_angel/"
+      ><i class="fab fa-instagram"></i
+    ></a>
+  </li>
+  <li class="icon">
+    <a href=""><i class="fab fa-youtube"></i></a>
+  </li>`,
   },
   {
     id: 3,
@@ -41,8 +61,18 @@ const information = [
     img: "./images/Mariska.png",
     job: "model",
     age: 17,
-    text: `Hey everyone I'm Mariska! I love modeling and am already doing so. Down below are my modeling examples`,
-    socialMedia: ``,
+    text: `Hey everyone I'm Mariska! I love modeling and am already doing so. Down below are my modeling social media.`,
+    socialMedia: `<li class="icon">
+    <a href="https://www.instagram.com/mariska.vdw/"
+      ><i class="fab fa-instagram"></i
+    ></a>
+  </li>
+  <li class="icon">
+    <a href=""><i class="fab fa-facebook"></i></a>
+  </li>
+  <li class="icon">
+    <a href=""><i class="fab fa-twitter"></i></a>
+  </li>`,
   },
   {
     id: 6,
@@ -182,7 +212,7 @@ scrollLinks.forEach((link) => {
     const element = document.getElementById(id);
 
     const navHeight = navbar.getBoundingClientRect().height;
-    const containerHeight = linksContainer.getBoundingClientRect().height;
+    const containerHeight = navbar.getBoundingClientRect().height;
     const fixedNav = navbar.classList.contains("fixed-nav");
     let position = element.offsetTop - navHeight;
 
@@ -198,7 +228,6 @@ scrollLinks.forEach((link) => {
       top: position,
     });
     // close
-    
   });
 });
 // calculate heights
