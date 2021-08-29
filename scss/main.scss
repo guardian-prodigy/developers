@@ -98,7 +98,7 @@ $transition: 0.2s all linear;
         position: fixed;
         top: 0;
         z-index: 2;
-        
+        transition: $transition;
         margin: 0 auto;
         background-color: $primary-blue-1;
       }
