@@ -112,11 +112,9 @@ html {
         top: 0;
         z-index: 2;
         transition: $transition;
-        margin: 0 auto;
         background-color: $primary-blue-1;
       }
     }
-
     .nav-intro {
       margin: 0 auto;
       width: 100%;
@@ -153,6 +151,7 @@ html {
             border-radius: $border-radius;
             margin: 0 auto;
             text-align: center;
+            transition: $transition;
             cursor: pointer;
             a {
               text-decoration: none;
@@ -160,6 +159,13 @@ html {
               text-transform: uppercase;
               letter-spacing: 0.2rem;
               font-size: 1.1rem;
+            }
+            &:hover a {
+              color: $primary-blue-5;
+            }
+            &:hover {
+              background: white;
+              box-shadow: $box-shadow-1;
             }
           }
         }
@@ -233,7 +239,7 @@ html {
       display: grid;
       place-items: center;
       grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-      margin: 0 auto;
+      margin: 3rem auto;
       transition: $transition;
       max-width: 1200px;
       article {
@@ -351,12 +357,11 @@ html {
       place-items: center;
       gap: 1rem;
       .icons {
-        display: grid;
         width: 100%;
-        grid-template-columns: repeat(5, 1fr);
+        display: flex;
         list-style: none;
-        justify-items: center;
-        max-width: 1120px;
+        justify-content: space-between;
+        max-width: 768px;
         .icon {
           color: white;
           font-size: 1.2rem;

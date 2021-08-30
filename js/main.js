@@ -2,7 +2,7 @@ const information = [
   {
     id: 1,
     name: "akash",
-    img: "./images/person-1.jpeg",
+    img: "./images/Akash.jpg",
     job: "Web-designer",
     age: 17,
     text: `Hello everyone I am Akash, creator and owner of this website. My specialty is web-development (HTML, CSS, and Javascript). For more information, please contact me using my social media listed below!`,
@@ -24,7 +24,7 @@ const information = [
     id: 2,
     name: "wiraysha",
     img: "./images/Wiraysha.png",
-    job: "designer",
+    job: "creator",
     age: 16,
     text: `Hello everyone I am Wiraysha. I make letters, pompoms, bears, and much more! Please visit my social media listed down below to see some examples of my work.`,
     socialMedia: `<li class="icon">
@@ -51,18 +51,12 @@ const information = [
     name: "mariska",
     img: "./images/Mariska.png",
     job: "model",
-    age: 17,
+    age: 16,
     text: `Hey everyone I'm Mariska! I love modeling and am already doing so. Down below are my modeling social media.`,
     socialMedia: `<li class="icon">
     <a href="https://www.instagram.com/mariska.vdw/"
       ><i class="fab fa-instagram"></i
     ></a>
-  </li>
-  <li class="icon">
-    <a href=""><i class="fab fa-facebook"></i></a>
-  </li>
-  <li class="icon">
-    <a href=""><i class="fab fa-twitter"></i></a>
   </li>`,
   },
   // {
@@ -153,7 +147,7 @@ function displayBtns(params) {
   );
   const FilterBtn = job
     .map(
-      (job) => `<button type="button" class="filter-btn" data-id=${job}>
+      (job) => `<button type="button" class="filter-btn" data-id=${job} id="${job}">
       ${job}
     </button>`
     )
@@ -198,3 +192,36 @@ function Sidebar() {
     });
   });
 }
+window.addEventListener("scroll", function () {
+  const scrollHeight = window.pageYOffset;
+  const navHeight = navbar.getBoundingClientRect().height;
+  if (scrollHeight > navHeight) {
+    navbar.classList.add("fixed-nav");
+  } else {
+    navbar.classList.remove("fixed-nav");
+  }
+});
+// const scrollLinks = document.querySelectorAll(".filter-btn");
+// scrollLinks.forEach((link) => {
+//   link.addEventListener("click", (e) => {
+//     // prevent default
+//     e.preventDefault();
+//     // navigate to specific spot
+//     const id = e.currentTarget.getAttribute("id").slice(1);
+
+//     const fixedNav = navbar.classList.contains("fixed-nav");
+//     let position = id.offsetTop - fixedNav;
+//     if (!fixedNav) {
+//       position = position - fixedNav;
+//     }
+//     if (navHeight > 82) {
+//       position = position;
+//     }
+//     window.scrollTo({
+//       left: 0,
+//       top: position,
+//     });
+//     // close
+//     sidebar.classList.toggle(shown);
+//   });
+// });
