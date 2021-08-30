@@ -41,7 +41,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
   li {
     list-style: none;
   }
@@ -100,6 +100,30 @@ html {
               .fa-bars {
                 font-size: 1.5rem;
                 transition: $transition;
+                -webkit-animation: bars 1.5s linear 1s infinite both alternate;
+                animation: bars 1.5s linear 1s infinite both alternate;
+                @-webkit-keyframes bars {
+                  0% {
+                    transform: scale(1.1);
+                  }
+                  50% {
+                    transform: scale(1.4);
+                  }
+                  100% {
+                    transform: scale(1);
+                  }
+                }
+                @keyframes bars {
+                  0% {
+                    transform: scale(1.1);
+                  }
+                  50% {
+                    transform: scale(1.4);
+                  }
+                  100% {
+                    transform: scale(1);
+                  }
+                }
                 &:hover {
                   transform: scale(1.2) rotate(90deg);
                 }
@@ -357,7 +381,8 @@ html {
     background: url("../images/stacked-waves-haikei(2).svg") center/cover
       no-repeat;
     .footer-section {
-      display: grid;      place-items: center;
+      display: grid;
+      place-items: center;
       gap: 1rem;
       .icons {
         width: 100%;

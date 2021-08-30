@@ -94,6 +94,38 @@ html {
   font-size: 1.5rem;
   -webkit-transition: 0.2s all linear;
   transition: 0.2s all linear;
+  -webkit-animation: bars 1.5s linear 1s infinite both alternate;
+  animation: bars 1.5s linear 1s infinite both alternate;
+}
+
+@-webkit-keyframes bars {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bars {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 * .main .nav-center .nav-full .nav-container .header a .fa-bars:hover {
