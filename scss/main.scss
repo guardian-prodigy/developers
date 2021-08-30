@@ -35,12 +35,13 @@ $transition: 0.2s all linear;
 }
 html {
   scroll-behavior: smooth;
+  // overflow-x: hidden;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  
   li {
     list-style: none;
   }
@@ -51,11 +52,11 @@ html {
   .main {
     .svg-background {
       background: url("../images/wave-haikei(15).svg") center/cover no-repeat;
-      width: 100%;
+      width: auto;
       min-height: 100vh;
+      overflow-x: hidden;
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       aspect-ratio: 960/300;
       box-shadow: $box-shadow-2;
 
@@ -71,7 +72,6 @@ html {
     }
     .nav-center {
       height: 100vh;
-      position: relative;
       .nav-full {
         width: 100%;
         .nav-container {
@@ -235,6 +235,9 @@ html {
     .btns-show {
       transform: translateX(0);
       max-width: 400px;
+      position: fixed;
+      inset: 0;
+      min-height: 100vh;
     }
     .section-center {
       display: grid;
