@@ -274,7 +274,7 @@ html {
           border-radius: $border-radius;
           width: 70%;
           height: 13rem;
-          margin: 0 auto;
+          margin: 1rem auto;
           position: relative;
           margin-top: 2rem;
           display: grid;
@@ -357,12 +357,12 @@ html {
     background: url("../images/stacked-waves-haikei(2).svg") center/cover
       no-repeat;
     .footer-section {
-      display: grid;
-      place-items: center;
+      display: grid;      place-items: center;
       gap: 1rem;
       .icons {
         width: 100%;
         display: flex;
+        padding: 1rem;
         list-style: none;
         justify-content: space-between;
         max-width: 768px;

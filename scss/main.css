@@ -302,7 +302,7 @@ html {
   border-radius: 0.5rem;
   width: 70%;
   height: 13rem;
-  margin: 0 auto;
+  margin: 1rem auto;
   position: relative;
   margin-top: 2rem;
   display: -ms-grid;
@@ -416,6 +416,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 1rem;
   list-style: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
