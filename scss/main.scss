@@ -56,9 +56,19 @@ html {
       top: 0;
       left: 0;
       aspect-ratio: 960/300;
+      box-shadow: $box-shadow-2;
+
+      -webkit-clip-path: polygon(
+        50% 0%,
+        100% 0,
+        100% 95%,
+        50% 100%,
+        0 95%,
+        0 0
+      );
+      clip-path: polygon(50% 0%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
     }
     .nav-center {
-      box-shadow: $box-shadow-2;
       height: 100vh;
       position: relative;
       .nav-full {
@@ -223,7 +233,7 @@ html {
       display: grid;
       place-items: center;
       grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-      margin: 3rem auto;
+      margin: 0 auto;
       transition: $transition;
       max-width: 1200px;
       article {
@@ -330,6 +340,7 @@ html {
     width: 100%;
     background: rgb(14, 14, 85);
     padding: 1rem;
+    margin-top: 1rem;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;

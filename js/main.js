@@ -1,28 +1,11 @@
 const information = [
   {
     id: 1,
-    name: "wiraysha",
-    img: "./images/person-1.jpeg",
-    job: "Letter-designer",
-    age: 16,
-    text: `Hello everyone I am Wiraysha. I make beautiful leters, pompoms, and much more! Please visit my social media listed down below to see some examples of my work.`,
-    socialMedia: `<li class="icon">
-    <a href="https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f"
-      ><i class="fab fa-instagram"></i
-    ></a>
-  </li>
-  <li class="icon">
-    <a href="https://www.facebook.com/profile.php?id=100070475412876"><i class="fab fa-facebook"></i></a>
-  </li><li class="icon"><a href=""><i class="fas fa-compass"></i></a></li>`,
-  },
-  {
-    id: 2,
     name: "akash",
     img: "./images/person-1.jpeg",
     job: "Web-designer",
     age: 17,
-    text: `tenetur deserunt expedita sit debitis, sapiente quos unde omnis culpa,
-          iste modi! Doloribus velit accusantium quod porro illum eos voluptas?`,
+    text: `Hello everyone I am Akash, creator and owner of this website. My specialty is web-development (HTML, CSS, and Javascript). For more information, please contact me using my social media listed below!`,
     socialMedia: `<li class="icon">
     <a href="https://wa.me/+5977624268"
       ><i class="fab fa-whatsapp"></i
@@ -34,29 +17,37 @@ const information = [
     ></a>
   </li>
   <li class="icon">
-    <a href=""><i class="fab fa-youtube"></i></a>
+    <a href="https://www.fiverr.com/akash_lewis?up_rollout=true"><i class="fas fa-sitemap"></i></a>
   </li>`,
   },
   {
+    id: 2,
+    name: "wiraysha",
+    img: "./images/Wiraysha.png",
+    job: "designer",
+    age: 16,
+    text: `Hello everyone I am Wiraysha. I make letters, pompoms, bears, and much more! Please visit my social media listed down below to see some examples of my work.`,
+    socialMedia: `<li class="icon">
+    <a href="https://instagram.com/wiraysha_workshop?igshid=4byv5ud4kl4f"
+      ><i class="fab fa-instagram"></i
+    ></a>
+  </li>
+  <li class="icon">
+    <a href="https://www.facebook.com/profile.php?id=100070475412876"><i class="fab fa-facebook"></i></a>
+  </li><li class="icon"><a href="https://guardian-prodigy.github.io/Wifey-s-website.github.io/wiraysha-website.html"><i class="fas fa-compass"></i></a></li>`,
+  },
+  {
     id: 3,
-    name: "iva",
-    img: "./images/person-1.jpeg",
-    job: `digital-art`,
-    age: 19,
-    text: `tenetur deserunt expedita sit debitis, sapiente quos unde omnis culpa,
-          iste modi! Doloribus velit accusantium quod porro illum eos voluptas?`,
+    name: "shrishti",
+    img: "./images/Shrishti.png",
+    job: `nail-Salon`,
+    age: 18,
+    text: `Hello Everyone I am Shrishti! I help my aunt with placing acrylic nails and gel polishing. For some examples of our work, please visit our instagram/facebook page.`,
+    socialMedia: `<li class="icon"><a href="https://instagram.com/priy_nails?utm_medium=copy_link"><i class="fab fa-instagram"></i></a></li>
+      <li class="icon"><a href="https://www.facebook.com/priynailss/"><i class="fab fa-facebook"></i></a></li>`,
   },
   {
     id: 4,
-    name: "joelle",
-    img: "./images/person-1.jpeg",
-    job: "entrepreneur",
-    age: 17,
-    text: `tenetur deserunt expedita sit debitis, sapiente quos unde omnis culpa,
-          iste modi! Doloribus velit accusantium quod porro illum eos voluptas?`,
-  },
-  {
-    id: 5,
     name: "mariska",
     img: "./images/Mariska.png",
     job: "model",
@@ -74,25 +65,32 @@ const information = [
     <a href=""><i class="fab fa-twitter"></i></a>
   </li>`,
   },
-  {
-    id: 6,
-    name: "jael",
-    img: "./images/person-1.jpeg",
-    job: "programmers",
-    age: 17,
-    text: `tenetur deserunt expedita sit debitis, sapiente quos unde omnis culpa,
-          iste modi! Doloribus velit accusantium quod porro illum eos voluptas?`,
-  },
-  {
-    id: 7,
-    name: "shrishti",
-    img: "./images/Shrishti.png",
-    job: `nail-salon`,
-    age: 18,
-    text: `Hello Everyone I am Shrishti! I help my aunt with placing acrylic nails and gel polishing. For some examples of our work, please visit our instagram/facebook page.`,
-    socialMedia: `<li class="icon"><a href="https://instagram.com/priy_nails?utm_medium=copy_link"><i class="fab fa-instagram"></i></a></li>
-      <li class="icon"><a href="https://www.facebook.com/priynailss/"><i class="fab fa-facebook"></i></a></li>`,
-  },
+  // {
+  //   id: 5,
+  //   name: "iva",
+  //   img: "./images/person-1.jpeg",
+  //   job: `digital-art`,
+  //   age: 19,
+  //   text: `tenetur deserunt expedita sit debitis, sapiente quos unde omnis culpa,
+  //         iste modi! Doloribus velit accusantium quod porro illum eos voluptas?`,
+  // },
+  // {
+  //   id: 6,
+  //   name: "joelle",
+  //   img: "./images/person-1.jpeg",
+  //   job: "entrepreneur",
+  //   age: 17,
+  //   text: ``,
+  // },
+  // {
+  //   id: 7,
+  //   name: "jael",
+  //   img: "./images/person-1.jpeg",
+  //   job: "programmers",
+  //   age: 17,
+  //   text: `tenetur deserunt expedita sit debitis, sapiente quos unde omnis culpa,
+  //         iste modi! Doloribus velit accusantium quod porro illum eos voluptas?`,
+  // },
 ];
 const sectionCenter = document.querySelector(".section-center");
 const sectionBtn = document.querySelector(".btn-container");
@@ -200,34 +198,3 @@ function Sidebar() {
     });
   });
 }
-
-// select links
-const scrollLinks = document.querySelectorAll(".filter-btn");
-scrollLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    // prevent default
-    e.preventDefault();
-    // navigate to specific spot
-    const id = e.currentTarget.getAttribute("class").slice(1);
-    const element = document.getElementById(id);
-
-    const navHeight = navbar.getBoundingClientRect().height;
-    const containerHeight = navbar.getBoundingClientRect().height;
-    const fixedNav = navbar.classList.contains("fixed-nav");
-    let position = element.offsetTop - navHeight;
-
-    if (!fixedNav) {
-      position = position - navHeight;
-    }
-    if (navHeight > 82) {
-      position = position + containerHeight;
-    }
-
-    window.scrollTo({
-      left: 0,
-      top: position,
-    });
-    // close
-  });
-});
-// calculate heights
