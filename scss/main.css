@@ -32,11 +32,15 @@ html {
   background: transparent;
 }
 
+* .main {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 * .main .svg-background {
   background: url("../images/wave-haikei(15).svg") center/cover no-repeat;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden;
   position: absolute;
   inset: 0;
   aspect-ratio: 960/300;

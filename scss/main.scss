@@ -35,7 +35,6 @@ $transition: 0.2s all linear;
 }
 html {
   scroll-behavior: smooth;
-  
 }
 * {
   margin: 0;
@@ -50,16 +49,16 @@ html {
     background: transparent;
   }
   .main {
+    overflow-x: hidden;
+    width: 100%;
     .svg-background {
       background: url("../images/wave-haikei(15).svg") center/cover no-repeat;
-      width: 100%;
+      width: 100vw;
       min-height: 100vh;
-      overflow-x: hidden;
       position: absolute;
       inset: 0;
       aspect-ratio: 960/300;
       box-shadow: $box-shadow-2;
-
       -webkit-clip-path: polygon(
         50% 0%,
         100% 0,
