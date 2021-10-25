@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 * {
@@ -30,6 +31,10 @@ html {
 * button {
   border: none;
   background: transparent;
+}
+
+* .main {
+  overflow: hidden;
 }
 
 * .main .svg-background {

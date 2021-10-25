@@ -35,7 +35,7 @@ $transition: 0.2s all linear;
 }
 html {
   scroll-behavior: smooth;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -50,6 +50,7 @@ html {
     background: transparent;
   }
   .main {
+    overflow: hidden;
     .svg-background {
       background: url("../images/wave-haikei(15).svg") center/cover no-repeat;
       width: auto;
