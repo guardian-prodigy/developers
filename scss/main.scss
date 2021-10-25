@@ -53,11 +53,14 @@ html {
     width: 100%;
     .svg-background {
       background: url("../images/wave-haikei(15).svg") center/cover no-repeat;
-      width: 100vw;
+      width: 100%;
       min-height: 100vh;
       position: absolute;
-      inset: 0;
-      aspect-ratio: 960/300;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      // aspect-ratio: 960/300;
       box-shadow: $box-shadow-2;
       -webkit-clip-path: polygon(
         50% 0%,
